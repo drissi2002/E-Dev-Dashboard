@@ -1,0 +1,34 @@
+<!--<section>
+    <app-session-item *ngFor="let sessionItem of sessionItems" [session]="sessionItem"
+    [ngClass]="{'session-web': sessionItem.name === 'Web' , 'session-mobile' :sessionItem.name === 'Mobile'}">
+d’utiliser la directive [ngClass] afin d’afficher chaque session de formation selon la
+classe CSS définie par le fichier session-item.component.css     
+</app-session-item>
+</section>-->
+<body>
+<header>
+    <h1>Liste des sessions de formation </h1>
+    <p class="description">Suivez les sessions dont vous voulez participer .</p>
+    </header>
+    <section>
+    <app-session-item *ngFor="let sessionItem of
+    sessionItems" [session]="sessionItem"
+    [ngClass]="{'session-web':
+    sessionItem.name === 'Web', 'session-mobile':
+    sessionItem.name === 'Mobile'}">
+    </app-session-item>
+    </section>
+</body>
+    <footer>
+    <a routerLink="/admin" routerLinkActive="active">
+    <img src="assets/admin.png" class="icon" />
+    </a>
+    </footer>
+    <!--Contrairement à une application Web classique, il n'est pas possible d'utiliser l'attribut href
+dans vos balises lien <a> (cela entraîne un rechargement de la page et une perte de notre
+contexte JavaScript). Angular nous fournit donc une directive en remplacement : RouterLink.
+Cette directive attendant un tableau contenant un path et des paramètres optionnels (query
+paramaters, fragment, ...).
+Une fois nos liens déclarés, il est nécessaire d'indiquer à Angular où sera chargé le contenu
+du lien. Cela se fait simplement à l'aide de la directive <router-outlet> qui va accueillir le
+contenu de la route.-->

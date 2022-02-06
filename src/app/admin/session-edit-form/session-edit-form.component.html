@@ -1,0 +1,54 @@
+<body>
+    <div class="container">
+        <form #sessionItemForm="ngForm" (ngSubmit)="editSession(sessionItemForm)">
+      <div class="row">
+          <h4>Modifier une session de formation</h4>
+          <div class="input-group">
+            <input type="text" name="image" id="image" placeholder="Image" [(ngModel)]="session.image" required/>
+          </div>
+          <div class="input-group">
+            <input type="number" name="duree" id="duree"  placeholder="Durée" [(ngModel)]="session.duree" #adress="ngModel" minlength="4" required/>
+            <!--<div *ngIf=" adress.invalid && (adress.dirty || adress.touched)">
+                <div *ngIf="adress['minlength'].errors">Minimum 4 caractères!</div>
+                <div *ngIf="adress['required'].errors">Le champ adresse est obligatoire!</div>
+            </div>-->       
+            <!--On ne veut pas que l’application affiche des erreurs avant que l'utilisateur ait
+                la possibilité de modifier le formulaire. Les contrôles de dirty et de touched
+                empêchent les erreurs de s'afficher jusqu'à ce que l'utilisateur tape la bonne
+                valeur de l’adresse.-->
+        </div>
+          <div class="input-group">
+            <input type="text" name="adress" id=" adress " placeholder="Lieu" [(ngModel)]="session.adress" required/>
+          </div>
+          <div class="input-group">
+            <input type="number" name="participants" id="participants" placeholder="Nombre de participants " [(ngModel)]="session.participants" required  />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-half">
+            <div class="input-group">
+              <input type="date" name="date" id="date" [(ngModel)]="session.date" required>
+            </div>
+          </div>
+          <div class="col-half">
+            <div class="input-group">
+              <select name="name" id="name" [(ngModel)]="session.name" required>
+                <option value="Web">Web</option>
+                <option value="Mobile">Mobile</option>
+              </select>
+              <select name="track" id="track" [(ngModel)]="session.track" required>
+                <option value="AngularJS">AngularJS</option>
+                <option value="NodeJS">NodeJS</option>
+                <option value="Flutter">Flutter</option>
+                <option value="ReactJS">ReactJS</option>
+                <option value="Ionic">Ionic</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" [disabled]="!sessionItemForm.form.valid">Modifier</button>
+        </div>
+      </form>
+    </div>
+  </body>

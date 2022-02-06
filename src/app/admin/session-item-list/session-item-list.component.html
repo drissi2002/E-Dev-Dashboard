@@ -1,0 +1,9 @@
+<body>
+<section>
+    <app-session-item *ngFor="let sessionItem of sessionItems" [session]="sessionItem"
+    [ngClass]="{'session-web': sessionItem.name === 'Web' , 'session-mobile' :sessionItem.name === 'Mobile'}">
+<!--d’utiliser la directive [ngClass] afin d’afficher chaque session de formation selon la
+classe CSS définie par le fichier session-item.component.css -->    
+</app-session-item>
+</section>
+</body>

@@ -1,0 +1,47 @@
+<!--<section>
+    <header>
+      <h1>Liste des sessions de formation </h1>
+    </header>
+    <app-session-item [session]="firstSession"></app-session-item>
+  <app-session-item-list></app-session-item-list>
+  </section>-->
+
+     <!-- <footer>
+        <nav class="navMenu">
+          <a routerLink="./list" routerLinkActive="active">session list</a>
+          <a routerLink="./add" routerLinkActive="active">add session</a>
+          <a [routerLink]="['./edit', 1]" routerLinkActive="active">update session</a>
+          <a href="#">About</a>
+          <div class="dot"></div>
+        </nav>
+      </footer>-->
+      <div id="navbar-animmenu">
+        <ul class="show-dropdown main-navbar">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            <li>
+                <a><i class="fas fa-tachometer-alt"></i><b>E-DEV</b></a>
+            </li>
+            <li >
+                <a routerLink="./list" routerLinkActive="active">Sessions List</a>
+            </li>
+            <li>
+                <a routerLink="./add" routerLinkActive="active">Add Session</a>
+            </li>
+            <li>
+                <a [routerLink]="['./edit', 1]" routerLinkActive="active"> Update Session</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!--La directive [routerLink]="['./edit', 1]" signifie qu’on va modifier la première session
+par défaut. D’où le paramètre id (comme indiqué dans la route edit dans admin.modue.ts)) va
+recevoir la valeur 1 par défaut. Pour faire cela, vous devez implémenter les étapes c et d
+suivantes.-->
+
+      
+     
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+
+   

@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="card">
+      <div class="imgBx">
+        
+        <img src={{session.image}}/>
+      </div>
+      <div class="contentBx">
+        <h2 >{{session.name}}</h2>
+        <div class="info">
+            <div>
+                <div >{{session.track}}</div>
+                <div>à partir de {{session.date | date :'d MMM y'}} | durée : {{session.duree}} jours</div>
+                <!--veut afficher la date de la formation sous la forme Mois Jour, Année. En
+utilisant une pipe, modifier l’affichage de l’attribut date (la date de la session)
+dans le template HTML (DOM) du composant SessionItemComponent-->
+                <div>à {{session.local}}</div> 
+                <li *ngIf=" session.participants < 20 ;then ok else notok"></li>
+                <ng-template #ok >Encore {{20 - session.participants}} places sont diponibles ! </ng-template>
+                <ng-template #notok>Session Compléte !</ng-template>
+                
+                <div>{{session.participants}} Participants </div>
+            </div>  
+        </div>
+        <br>
+        <div class="tools"> 
+            <a class="delete"> 
+              Delete
+            </a> 
+            <a *ngIf="session.participants < 20 " class="inscrire" (click)="inscrire()"> 
+            Subscribe 
+            </a>  
+            <!--s’intéresse à la Directive structurelle (ngIf). On suppose que chaque
+session contient 20 participants. Ou vous demande d’afficher le message « Session
+Complete » si on atteint 20 participants-->
+            <a [routerLink]="['../edit', session.id]" routerLinkActive="active" class="update"> 
+              Update
+              </a>      
+      </div>
+    </div>
+  </div>
+
+
+  
