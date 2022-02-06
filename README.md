@@ -1,6 +1,15 @@
-# TrainingApp
+# About E-DEV 
+E-dev ( first MEAN stack project ) is a simple admin-dashboard for managing e-learning sessions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+<p align="center">
+  <img src="https://i.imgur.com/cBDNjWR.png"  alt="accessibility text">
+  <img src="https://i.imgur.com/5A9q8nX.png" alt="accessibility text">
+  <img src="https://i.imgur.com/cc1DbG3.png"  alt="accessibility text">
+  <img src="https://i.imgur.com/b2EgPWR.png"  alt="accessibility text">
+  <img src="https://i.imgur.com/c4rk6C3.png"  alt="accessibility text">
+</p>
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3
 
 ## Development server
 
@@ -25,8 +34,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# E-Dev-Dashboard
-# E-Dev-Dashboard
-# E-dev
-# E-dev
-# E-Dev-Dashboard
+
+  
