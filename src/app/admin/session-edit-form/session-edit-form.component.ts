@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Session } from 'src/app/session';
 import { FakeSessionItemService } from '../fake-session-item.service';
 
@@ -13,7 +13,7 @@ export class SessionEditFormComponent implements OnInit {
   sub: any;
   id: any;
 
-  constructor(private route: ActivatedRoute, private sessionItemService: FakeSessionItemService) { }
+  constructor(private route: ActivatedRoute, private sessionItemService: FakeSessionItemService,private router:Router) { }
   tracks = ['AngularJS', 'ReactJS','NodeJS', 'Flutter', 'Ionic'];
   session = new Session(1,"https://i.imgur.com/zxilNO8.png" ,'Web', this.tracks[2], new Date('2018-06-11'), 10, 'Lyon', 0, false);
  
@@ -27,6 +27,7 @@ export class SessionEditFormComponent implements OnInit {
   }
   editSession(sessionItem: NgForm): void{
     console.log("SessionUpdated..."+JSON.stringify(sessionItem.value));
+    this.router.navigate(["/admin/list"]);
     }
 
 }
