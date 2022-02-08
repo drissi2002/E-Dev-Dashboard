@@ -1,7 +1,7 @@
 # About E-DEV 
 E-dev ( first MEAN stack project ) is a simple admin-dashboard for managing e-learning sessions
 
-## partie frontend - Angular
+## Partie frontend - Angular
 <p align="center">
   <img src="https://i.imgur.com/cBDNjWR.png"  alt="accessibility text">
   <img src="https://i.imgur.com/5A9q8nX.png" alt="accessibility text">
